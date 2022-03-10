@@ -88,6 +88,7 @@ public class ora0309 {
         System.out.println("Az első számod: " + otSzam[0]);
         System.out.println("Az utolsó számod: " + utolsoSzam);*/
 
+        /*
         String[] strings = {"első", "második", "harmadik", "negyedik", "ötödik", "hatodik", "hetedik"};
         int db = strings.length;
         int i = 0;
@@ -100,12 +101,17 @@ public class ora0309 {
             System.out.println(strings[i]);
             i--;
         }
+         */
 
         int[] years = {1999, 1988, 2006, 1743, 965, 2022, 1349, 1582, 1222, 1876, 2001, 1946, 1482};
-        int ye = years.length - 1;
         int r = 0;
-        while (r < ye){
-            if(){};
+        while (r < years.length -1) {
+            if(1586 < years[r]){
+                System.out.println(years[r]);
+                r++;
+            } else {
+                r++;
+            };
         }
 
     }
