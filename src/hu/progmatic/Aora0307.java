@@ -14,13 +14,13 @@ public class Aora0307 {
         int darabSzam = scanner.nextInt();
         scanner.nextLine();
 
-        while (gyumolcsok.size() < darabSzam){
+        while (gyumolcsok.size() < darabSzam) {
             System.out.println("Írj egy gyümölcsöt!");
             String gyumolcs;
             gyumolcs = scanner.nextLine();
             scanner.nextLine();
             gyumolcsok.add(gyumolcs);
-            System.out.println(gyumolcsok.size() + " gyümölcsöt adtál meg eddig, még " + (darabSzam - gyumolcsok.size()) + " hiányzik a listádról." );
+            System.out.println(gyumolcsok.size() + " gyümölcsöt adtál meg eddig, még " + (darabSzam - gyumolcsok.size()) + " hiányzik a listádról.");
         }
         System.out.println("Beírtad a " + darabSzam + "db gyümölcsöt");
 
@@ -41,9 +41,8 @@ public class Aora0307 {
         */
 
 
-
         //Arfolyam
-        /*
+
         System.out.println("Adj meg egy stop-loss értéket: (0-20)");
         int stopLoss = scanner.nextInt();
         scanner.nextLine();
@@ -53,8 +52,9 @@ public class Aora0307 {
         int jelenlegiArfolyam = kezdoErtek;
         int napok = 0;
         String mindegy;
+        int valt = 0;
 
-        while (jelenlegiArfolyam >= stopLoss){
+        while (jelenlegiArfolyam >= stopLoss) {
             System.out.println("Add meg az árfolyam változását, a " + napok + ". napon");
             int valtozas = scanner.nextInt();
             scanner.nextLine();
@@ -68,10 +68,11 @@ public class Aora0307 {
         scanner.nextLine();
 
         do {
-            jelenlegiArfolyam += ranPluArfVal()    ;
+            jelenlegiArfolyam += ranPluArfVal();
             System.out.println("Változott az árfolyam. A " + napok + ". napon.(" + jelenlegiArfolyam + ")");
             napok++;
-        } while (jelenlegiArfolyam <= kezdoErtek);{
+        } while (jelenlegiArfolyam <= kezdoErtek);
+        {
             jelenlegiArfolyam += ranPluArfVal();
             System.out.println("Változott az árfolyam. A " + napok + ". napon.(" + jelenlegiArfolyam + ")");
             napok++;
@@ -81,7 +82,7 @@ public class Aora0307 {
         String yesOrNo = scanner.nextLine();
         scanner.nextLine();
 
-        if (yesOrNo.equalsIgnoreCase("i")){
+        if (yesOrNo.equalsIgnoreCase("i")) {
             System.out.println("Add meg az új stop-loss értéket:");
             stopLoss = scanner.nextInt();
             scanner.nextLine();
@@ -92,10 +93,9 @@ public class Aora0307 {
             }
         } else {
             System.out.println("További szép napot!");
-            */
 
 
-        //Irányítószám
+            //Irányítószám
         /*
         int iranyitoSzam;
 
@@ -111,7 +111,7 @@ public class Aora0307 {
         */
 
 
-        //Abszolút érték             Ternaris / háromlábú   operátorok
+            //Abszolút érték             Ternaris / háromlábú   operátorok
         /*
         System.out.println("Kérek egy számot!");
         int szam = scanner.nextInt();
@@ -121,23 +121,23 @@ public class Aora0307 {
         System.out.println(Math.abs(szam));
          */
 
+        }
     }
 
+        public static int ranArfVal () {
+            Random randomNum = new Random();
+            int valtMax = 0;
+            int valtMin = -5;
+            int valt = valtMin + randomNum.nextInt(valtMax);
+            return valt;
+        }
 
-    public static int ranArfVal(){
-        Random randomNum = new Random();
-        int valtMax = 0;
-        int valtMin = -5;
-        int valt = valtMin + randomNum.nextInt(valtMax);
-        return valt;
-    }
-
-    public static int ranPluArfVal(){
-        Random randomNum = new Random();
-        int valtMax = 5;
-        int valtMin = 0;
-        int valt = valtMin + randomNum.nextInt(valtMax);
-        return valt;
-    }
+        public static int ranPluArfVal () {
+            Random randomNum = new Random();
+            int valtMax = 5;
+            int valtMin = 0;
+            int valt = valtMin + randomNum.nextInt(valtMax);
+            return valt;
+        }
 
 }
