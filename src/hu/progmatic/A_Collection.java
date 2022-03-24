@@ -147,3 +147,17 @@ public class A_Collection {
       System.out.format("double : %.2f", input);
 
 */
+
+/*--------     ++      ------------
+
+        int a=5,i;
+
+        i=++a + ++a + a++;    ++a növeli, majd használja a változót.
+        i=a++ + ++a + ++a;    a++ használja, majd növeli a változót.
+        a=++a + ++a + a++;
+
+        i=6 + 7 + 7; -20
+        i=5 + 7 + 8; -20
+        a=6 + 7 + 7; -20
+*/
+
