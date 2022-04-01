@@ -1,5 +1,6 @@
 package hu.progmatic;
 
+// ------------------------------------Importált cuccok------------------------------
 import java.util.Scanner;
 import java.time.LocalDate;
 import java.time.LocalTime;
@@ -9,6 +10,7 @@ import java.util.ArrayList;
 
 public class A_Collection {
 
+// --------------------main metóduson kívül is elérhető értékek létrehozása------------------
     static int x= 1;
     static int y= 2;
     static int z= 3;
@@ -23,27 +25,31 @@ public class A_Collection {
 
         float f = 10 / 3F;   //a float és a double között a kiszámolt tizedesek száma a különbség,
 
-//if (name.equalsIgnoreCase("Ria") || name.equalsIgnoreCase("Balázs"))
-
+//-----------------------------------------------------SWITCH---------------------------------------
         /*switch (grade){
             case 1:
                 System.out.println("ELÉGTELEN!");
                 break;}*/
 
+//-------------------------------------------------- Randomizálás -----------------------------------
+        //  ++  import java.util.Random;
         int tuifaMax = 200;
         int tuzifaMin = 1;
         Random randomNum = new Random();
         int tuzifa = tuzifaMin + randomNum.nextInt(tuifaMax);
 
-//++evek; // evek++ - a régi érték kerül behelyettesítésre // ++evek - az új érték kerül
+//---------------------------------------------------- Scanner ---------------------------------------
 
+        // ++ import java.util.Scanner;
         int szam = sc.nextInt();        //ott marad  a "sor vége" karakter.
         sc.nextLine();                  // így már nem!
 
         /* STDIN - scanner -> Szia = S, z, a, <-, i, a,
            STDOUT - sout -> végleges változat kimenetele */
 
-/*
+
+
+/*--------------------------------------------- DE MORGAN AZONOSSÁG ----------------------------
         if (!fullTime.equalsIgnoreCase("igen") && workTime < 36){     // De- morgan azonosság
             System.out.println("Főállású");
         } else {
@@ -51,9 +57,13 @@ public class A_Collection {
         }
 */
 
+//--------------------------------------------- ARRAYLIST LÉTREHOZÁS ----------------------------
+        // ++ import java.util.ArrayList;
         ArrayList<String> gyumolcsok = new ArrayList<>();
+        // Egy idő közben is növelhető tömbszerkezet...
 
-/*
+
+/*------------------------------------------ WHILE // DO - WHILE --------------------------------------
         String szoveg = "";
         String darab;
 
@@ -98,6 +108,7 @@ public class A_Collection {
 
     }
 
+//------------------------------------ METÓDUS PÉLDÁK -----------------------------
     public static int calculateNet(int gross){
         int net = (gross * 665) / 1000;
         return net;
@@ -148,9 +159,9 @@ public class A_Collection {
 
 */
 
-/*--------     ++      ------------
+/*-------------------------------------             ++            -----------------------------
 
-        int a=5,i;
+        int a = 5, i;
 
         i=++a + ++a + a++;    ++a növeli, majd használja a változót.
         i=a++ + ++a + ++a;    a++ használja, majd növeli a változót.
@@ -160,4 +171,46 @@ public class A_Collection {
         i=5 + 7 + 8; -20
         a=6 + 7 + 7; -20
 */
+
+/*
+---------------------------------------   SZÖVEGKEZELÉS   --------------------------------
+
+        String[] fields = csv[0].split(";");   ((";"-jelnél  szétszedi a stringeket))
+
+        System.out.println("Budapest".substring(0,3).toUpperCase());
+
+        ineteger.parseInt  -   Szöveget számmá alakít
+
+        if (name.equalsIgnoreCase("Ria") || name.equalsIgnoreCase("Balázs")) // Szövegösszehasonlítás
+
+        temperatures[i] = Integer.parseInt(values[2].trim());
+        .trim(); - Szóközt rak be a stringbe
+
+
+ */
+
+/*------------------------------------------  BUBORÉKOLÁS  ---------------------------------
+
+                            Növekvő sorrendbe rendezi
+        int temp = 0;
+        for (int j = 0; j < temperatures.length-1; j++) {          A külső for viszi végig minden számon
+                                                                    a buborékolást
+
+            //OPTIMALIZÁCIÓ (ha sorban vannak az elemek kilép a loop)
+            boolean sorted = true;
+
+            for (int i = 0; i < temperatures.length-1; i++) {      A belső for csak egy számot visz
+                if (temperatures[i] > temperatures[i+1]){          tovább
+                    temp = temperatures[i];
+                    temperatures[i] = temperatures[i+1];
+                    temperatures[i+1] = temp;
+                    sorted = false;
+                }
+            }
+            if(sorted){
+                break;
+            }
+        }
+
+ */
 
